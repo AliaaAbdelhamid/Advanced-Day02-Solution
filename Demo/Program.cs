@@ -413,6 +413,75 @@ namespace Demo
 
 
 			#endregion
+
+			#region Generic Collections - LinkedList<T>
+
+			//LinkedList<int> linkedList = new LinkedList<int>();
+
+			//LinkedListNode<int> FirstNode = linkedList.AddFirst(10);
+
+			//linkedList.AddFirst(20); // Add Before First Node 
+
+			//linkedList.AddLast(30); // Add After Last Node
+
+			//LinkedListNode<int> AnotherNode = new LinkedListNode<int>(100);
+			//linkedList.AddAfter(FirstNode, AnotherNode);
+
+			////foreach (int item in linkedList)
+			////	Console.Write($"{item} "); //  20 10 100 30
+
+
+			//LinkedListNode<int>? FirstElement = linkedList.First;
+			//Console.WriteLine(FirstElement?.Value); // 20
+			//LinkedListNode<int>? LastElement = linkedList.Last;
+			//Console.WriteLine(LastElement?.Value); // 30
+			//LinkedListNode<int>? NextNode = AnotherNode.Next;
+			//Console.WriteLine(NextNode?.Value); // 30
+			//LinkedListNode<int>? PrevNode = AnotherNode.Previous;
+			//Console.WriteLine(PrevNode?.Value); // 10
+
+
+			//LinkedList<int>? Hamda = AnotherNode.List;
+			//foreach (int item in Hamda)
+			//	Console.Write($"{item} "); // 20 10 100 30
+
+
+
+			#endregion
+
+			#region Generic Collections - Stack 
+
+			//Stack<int> stack = new Stack<int>();
+			//Console.WriteLine(stack.Count); // 0
+			//Console.WriteLine(stack.Capacity); // 0
+			//stack.Push(1);
+			//stack.Push(2);
+			//stack.Push(3);
+			//Console.WriteLine(stack.Count); // 3
+			//Console.WriteLine(stack.Capacity); // 4
+			//Console.WriteLine(stack.Pop()); // Remove and Return Last Element In Stack
+			//Console.WriteLine(stack.Peek()); // Return Last Element In Stack Without Removing it 
+
+			//bool Flag = stack.TryPop(out int popOut);
+			//Console.WriteLine(Flag); // True 
+			//Console.WriteLine(popOut); // 2
+
+			//Flag = stack.TryPeek(out int PeekOut);
+			//Console.WriteLine(Flag); // True 
+			//Console.WriteLine(PeekOut); // 1
+
+			//stack.Pop(); // 1
+
+			//Flag = stack.TryPop(out popOut);
+			//Console.WriteLine(Flag); // False 
+			//Console.WriteLine(popOut); // 0
+
+			//stack.Clear(); // Remove All Element 
+
+			#endregion
+
+
+
 		}
 	}
 }
