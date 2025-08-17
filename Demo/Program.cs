@@ -1,4 +1,6 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Demo
 {
@@ -220,7 +222,7 @@ namespace Demo
 			#endregion
 
 			#region Insert Element
-			
+
 			//Console.WriteLine("========== Insert Element ==========");
 			//Console.WriteLine($"List Capacity = {list.Capacity} , List Count = {list.Count}"); // 8 , 5
 			//Console.Write("List : ");
@@ -325,13 +327,90 @@ namespace Demo
 			#endregion
 
 			#region Type Safety Of List 
-			
+
 			//list = new List<int>(5) { 1, 2, 3, 4};
 			////list.Add("Route"); // Invalid 
 			//int Result = SumList(list);
 			//Console.WriteLine($"Sum List = {Result}"); // 10
 
 			#endregion
+
+			#endregion
+
+			#region Method List 
+			//List<int> numbers = new List<int>(5) { 1, 2, 3, 4, 5 };
+
+			//numbers.Add(10);
+			//numbers.AddRange(20, 30, 40, 50, 60);
+
+			//ReadOnlyCollection<int> readOnlyCollection = numbers.AsReadOnly();
+			////readOnlyCollection[0] = 100; // Invalid 
+			//foreach (int item in readOnlyCollection)
+			//	Console.Write($"{item} ");
+
+			//numbers[0] = 100; // 1 2 3 4 5 10 20 30 40 50 60
+			//Console.WriteLine("After numbers[0] = 100 ");
+			//foreach (int item in readOnlyCollection)
+			//	Console.Write($"{item} "); // 100 2 3 4 5 10 20 30 40 50 60
+
+
+			//int IndexResult = numbers.BinarySearch(3);
+			//Console.WriteLine(IndexResult); // 2 
+
+			// IndexResult = numbers.BinarySearch(100);
+			//Console.WriteLine(IndexResult); // -12 * Bitwise of 11
+
+
+			//IndexResult = numbers.BinarySearch(9);
+			//Console.WriteLine(IndexResult); // -6 * Bitwise of 5
+
+			//numbers.Clear();
+			//Console.WriteLine($"Numbers Count = {numbers.Count}"); // 0
+			//Console.WriteLine($"Numbers Capacity = {numbers.Capacity}"); // 20
+
+			//int[] arr = new int[15];
+			//numbers.CopyTo(arr);
+			//foreach (int item in arr) Console.Write($"{item} ");
+			//// 1 2 3 4 5 10 20 30 40 50 60 0 0 0 0
+			//Console.WriteLine("\n==========");
+			//numbers.CopyTo(arr, 2);
+			//foreach (int item in arr) Console.Write($"{item} ");
+			//// 0 0 1 2 3 4 5 10 20 30 40 50 60 0 0
+			//Console.WriteLine("\n==========");
+			//numbers.CopyTo(1, arr, 2, 5);
+			//foreach (int item in arr) Console.Write($"{item} ");
+			////0 0 2 3 4 5 10 0 0 0 0 0 0 0 0
+
+
+			//List<int> RangeNumbers = numbers.GetRange(1, 5);
+			//foreach (int item in RangeNumbers)
+			//	Console.Write($"{item} "); // 2 3 4 5 10
+
+			//int FirstindexOf10 = numbers.IndexOf(10);
+			//Console.WriteLine(FirstindexOf10); // 5
+
+			//int LastIndexOf10 = numbers.LastIndexOf(10);
+			//Console.WriteLine(LastIndexOf10); // 5
+
+			//bool Flag = numbers.Remove(10); // 1 2 3 4 5 20 30 40 50 60
+
+			//numbers.RemoveRange(0, 3); // 4 5 10 20 30 40 50 60
+
+			//numbers.RemoveAt(0); // 2 3 4 5 10 20 30 40 50 60
+
+			//List<int> list = new List<int>(5) { 1, 2, 3, 4, 5 };
+			//Console.WriteLine($"Capacity = {list.Capacity}"); // 5
+			//int NewCapacity = list.EnsureCapacity(10);
+			//Console.WriteLine($"New Capacity = {list.Capacity}"); // 10
+			//NewCapacity = list.EnsureCapacity(11);
+			//Console.WriteLine($"New Capacity = {list.Capacity}"); // 20 
+			//NewCapacity = list.EnsureCapacity(19);
+			//Console.WriteLine($"New Capacity = {list.Capacity}"); // 20 
+			//NewCapacity = list.EnsureCapacity(21);
+			//Console.WriteLine($"New Capacity = {list.Capacity}"); // 40 
+
+
+
 
 			#endregion
 		}
